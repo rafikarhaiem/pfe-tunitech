@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: laravel-webapp
+  name: laravel-webapp
+  namespace: default
+spec:
+  minReadySeconds: 10
+  progressDeadlineSeconds: 2147483647
+  replicas: 1
+  revisionHistoryLimit: 2147483647
+  selector:
+    matchLabels:
+      app: laravel-webapp
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: laravel-webapp
+      namespace: default
+    spec:
+      containers:
+      - env:
+        - name: APP_NAME
+          value: Laravel
+        - name: APP_ENV
+          value: local
+        - name: APP_KEY
+          value: SUPER_SECRET
+        - name: APP_DEBUG
+          value: "true"
+        - name: APP_LOG_LEVEL
+          value: debug
+        - name: LOG_CHANNEL
+          value: stack
+        - name: DB_CONNECTION
+          value: mysql
+        - name: DB_HOST
+          value: mysql
+        - name: DB_DATABASE
+          value: laraveldb
+        - name: DB_USERNAME
+          value: laraveldbuser
+        - name: DB_PASSWORD
+          value: laravel
+        image: gcr.io/pfe-tunitech/laravel-app
+        imagePullPolicy: IfNotPresent
+        name: laravel-webapp
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}

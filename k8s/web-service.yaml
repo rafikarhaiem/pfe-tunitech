@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-webapp-service
+  namespace: default
+  labels:
+    app: laravel-webapp
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31600
+  selector:
+    app: laravel-webapp
+  type: LoadBalancer
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+status:
+  loadBalancer: {}
