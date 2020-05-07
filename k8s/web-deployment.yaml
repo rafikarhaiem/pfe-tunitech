@@ -50,7 +50,7 @@ spec:
           value: laraveldbuser
         - name: DB_PASSWORD
           value: laravel
-        image: gcr.io/pfe-tunitech/laravel-app
+        image: gcr.io/pfe-tunitech/laravel-app:latest
         imagePullPolicy: IfNotPresent
         name: laravel-webapp
         ports:
