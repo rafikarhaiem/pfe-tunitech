@@ -50,6 +50,28 @@ spec:
           value: laraveldbuser
         - name: DB_PASSWORD
           value: laravel
+        - name: BROADCAST_DRIVER
+          value: "pusher"
+        - name: CACHE_DRIVER
+          value: "redis"
+        - name: SESSION_DRIVER
+          value: "redis"
+        - name: SESSION_LIFETIME
+          value: "120"
+        - name: QUEUE_DRIVER
+          value: "redis"
+        - name: REDIS_HOST
+          value: "redis-svc"
+        - name: REDIS_PASSWORD
+          value: "null"
+        - name: REDIS_PORT
+          value: "6379"
+        - name: PUSHER_APP_ID
+          value: "SUPER_SECRET"
+        - name: PUSHER_APP_KEY
+          value: "SUPER_SECRET"
+        - name: PUSHER_APP_SECRET
+          value: "SUPER_SECRET"
         image: gcr.io/pfe-tunitech/laravel-app
         imagePullPolicy: IfNotPresent
         name: laravel-webapp
