@@ -1,6 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/pfe-tunitech/laravel-app:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/laravel-app', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['tag', 'gcr.io/pfe-tunitech/laravel-app:$SHORT_SHA', 'gcr.io/pfe-tunitech/laravel-app:latest']
-images: ['gcr.io/pfe-tunitech/laravel-app:$SHORT_SHA', 'gcr.io/pfe-tunitech/laravel-app:latest']
+  args: ['push', 'gcr.io/$PROJECT_ID/laravel-app']
