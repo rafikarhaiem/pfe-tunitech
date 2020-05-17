@@ -33,7 +33,7 @@ spec:
         - name: APP_ENV
           value: local
         - name: APP_KEY
-          value: SUPER_SECRET
+          value: base64:yBGwtHbg7llOzmM0PQ4OpOHozkllZkeC6yNvyJhPPiY=
         - name: APP_DEBUG
           value: "true"
         - name: APP_LOG_LEVEL
@@ -72,8 +72,8 @@ spec:
           value: "SUPER_SECRET"
         - name: PUSHER_APP_SECRET
           value: "SUPER_SECRET"
-        image: gcr.io/pfe-tunitech/laravel-app
-        imagePullPolicy: IfNotPresent
+        image: gcr.io/pfe-tunitech/laravel-app:latest
+        imagePullPolicy: Always
         name: laravel-webapp
         ports:
         - containerPort: 80
