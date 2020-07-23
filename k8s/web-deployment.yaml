@@ -72,7 +72,7 @@ spec:
           value: "SUPER_SECRET"
         - name: PUSHER_APP_SECRET
           value: "SUPER_SECRET"
-        image: gcr.io/tunitech-pfe/laravel-app:latest
+        image: laravel-app
         imagePullPolicy: Always
         name: laravel-webapp
         ports:
