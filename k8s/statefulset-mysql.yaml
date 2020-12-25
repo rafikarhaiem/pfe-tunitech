@@ -26,13 +26,13 @@ spec:
         - --ignore-db-dir=lost+found
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: laravel
+          value: 
         - name: MYSQL_DATABASE
-          value: laraveldb
+          value: 
         - name: MYSQL_USER
-          value: laraveldbuser
+          value: 
         - name: MYSQL_PASSWORD
-          value: laravel
+          value: 
         image: mysql:5.7
         imagePullPolicy: IfNotPresent
         name: container-mysql
