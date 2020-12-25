@@ -8,9 +8,7 @@ metadata:
   namespace: default
 spec:
   minReadySeconds: 10
-  progressDeadlineSeconds: 2147483647
-  replicas: 1
-  revisionHistoryLimit: 2147483647
+  replicas: 3
   selector:
     matchLabels:
       app: laravel-webapp
@@ -33,7 +31,7 @@ spec:
         - name: APP_ENV
           value: local
         - name: APP_KEY
-          value: base64:yBGwtHbg7llOzmM0PQ4OpOHozkllZkeC6yNvyJhPPiY=
+          value: base64:
         - name: APP_DEBUG
           value: "true"
         - name: APP_LOG_LEVEL
@@ -45,11 +43,11 @@ spec:
         - name: DB_HOST
           value: mysql
         - name: DB_DATABASE
-          value: laraveldb
+          value: 
         - name: DB_USERNAME
-          value: laraveldbuser
+          value: 
         - name: DB_PASSWORD
-          value: laravel
+          value: 
         - name: BROADCAST_DRIVER
           value: "pusher"
         - name: CACHE_DRIVER
@@ -66,13 +64,7 @@ spec:
           value: "null"
         - name: REDIS_PORT
           value: "6379"
-        - name: PUSHER_APP_ID
-          value: "SUPER_SECRET"
-        - name: PUSHER_APP_KEY
-          value: "SUPER_SECRET"
-        - name: PUSHER_APP_SECRET
-          value: "SUPER_SECRET"
-        image: laravel-app
+        image: gcr.io/tunitech-project-k8s/laravel-app
         imagePullPolicy: Always
         name: laravel-webapp
         ports:
