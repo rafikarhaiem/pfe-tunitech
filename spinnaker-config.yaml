@@ -1,0 +1,50 @@
+gcs:
+  enabled: true
+  bucket: tunitech-project-k8s-spinnaker-config
+  project: tunitech-project-k8s
+  jsonKey: '{
+  "type": "service_account",
+  "project_id": "tunitech-project-k8s",
+  "private_key_id": "d57c40bcfdb1db8fe374654f9fe990a1e7687ceb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCJCHvfEIBvRHxL\ncQ3VWrV56GjQs9gFeKO2MpmKvNVahAUaX/NO/Qy1EiaHXEEvqu+1SlOKW2L0MYmK\nw/yYGotQwCYB0I8pqHOqrhuhE2nJDzZYsVJBqStPe25SEXWpD3Qt/SkiOWXrPRPh\nuhP3Oy7ZDtCnnzkIgbYksGUDqRbnDngK0sEuEiw6gNoiTP7eq7XGmtE+hi+QPU5B\nErIVQGWKi4GOZIZ8Mzo1Kd8ySesgnFAFZMnb7UIFXSXyCr8TZeKkySk2AWWg2Y0t\nuIR0fai2mlnPiozFJjZVSlr6JgFOjRqFf8+FZoHj37TSfcEWbyhRWSVVKj9ymtBA\n2nHPB5xjAgMBAAECggEAPQnSY2HuU6Gl29TX3JkzDMJBLfVt28II6jdPvUSvpEn6\nG+1xa1W8O0uCbfjh8GGrtI0O+SoLwcnvAiiacwYf2DA+vcAwhNXL79Lt66nCDRUB\nmDAj+6tm51iLo3KzfkKr9XA2yk/W3hmuqXVBP3bVP0oiFwgNV4SvpVgNJrxCv1hD\noZoyHDtCEKgfqId5byd/IcXIqe+n1IEgJqYm8AZFbpz3OMVJy870brexvMQw2KPK\nNPxXxyoRUezZOrP9kovVjWdRfgswmznx+pT+kkWrGLMbv2lkZP+edSrDMbF+GQWW\nMGRHT7tax7xo/12rapm5TvxQjU5CmVi+YGDZzDwKQQKBgQDA+00TYS0D9E0zLxyg\nR56Rrh9lF51TDn6Olls8ovvv5ZWq9yZBiTtMdPy/luriUU7t6JhE5pxxMnCAE85L\npQihntOfJdttdtDQC7jjF8dp78zgChLykBuPsJs6Oz7ZbEcYXWLAdbZHwuZqtA+x\nNqrrTTWxmi3LAr4pd48Q9lmd3QKBgQC1yA1UFZmdMLb7V5cPmy6w0V7q7T0Ih0dx\nO/RyGEgPUFS1W0pQTgZPAfJUHWOLm9ZNnr2stMF7ep0iHmIfU59XHJOuW2KGqlPU\nmG5lmHKjQSu6AyjajfboIJG6sxNbJWFySLbp+8+QmrOwKbyc0Mc4hRs/cygXw5lf\nx0RGAIwfPwKBgQCVrNNU6pPNc1fFEQ80yReVieVTtQMSfjVuRfOxjf+1Su3QUixb\nvCI/5KR7vIOk0MdVAofHOM2xhht3WuUwCmotYFBmKSiNOBAwrEbT64eBBLp0MZwM\ngfS+d42NlpHidHaX0SZce2/LLMEllU5udiYOpi20+A34XMI8yzwtPcS4CQKBgQCA\nMXE8z/LByJ3yCCYOqmg156DhWaaGAiiesSJE59zBd+wU7SkuEqgeRYgoS4Vs6dwq\nZvzp85rSwnhXnEekQeuHmi6Hcgi8YRe3QDvyR5zohkgY6KuB3UW3E2jR2gGXcHgV\nCTR9M8h/+KkpXXWWvSEROcUqbMJkZ9sckUETgMVQLwKBgBAPxSHk5RH45AazPt//\nH48iz6kw6l1BX9+JjYfQ6/p18iVKAr6gNjlzkmvJpn2zwlxnmIlHE3dR49XxyrWL\nrBTZttDeIY4IoNGwa7wxDNrzY2UiSxiqC8D9HosPVxhwOLSyacbcQxA1w59xVOeb\nas+zyrp6i5vhqzAHVRTJAsZi\n-----END PRIVATE KEY-----\n",
+  "client_email": "spinnaker-account@tunitech-project-k8s.iam.gserviceaccount.com",
+  "client_id": "117383924241999467176",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spinnaker-account%40tunitech-project-k8s.iam.gserviceaccount.com"
+}'
+
+dockerRegistries:
+- name: gcr
+  address: https://gcr.io
+  username: _json_key
+  password: '{
+  "type": "service_account",
+  "project_id": "tunitech-project-k8s",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "spinnaker-account@tunitech-project-k8s.iam.gserviceaccount.com",
+  "client_id": "",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spinnaker-account%40tunitech-project-k8s.iam.gserviceaccount.com"
+}'
+  email: rafika.rhaiem@tuni-tech.com
+
+# Disable minio as the default storage backend
+minio:
+  enabled: false
+
+# Configure Spinnaker to enable GCP services
+halyard:
+  additionalScripts:
+    create: true
+    data:
+      enable_gcs_artifacts.sh: |-
+        $HAL_COMMAND config artifact gcs account add gcs-tunitech-project-k8s --json-path /opt/gcs/key.json
+        $HAL_COMMAND config artifact gcs enable
+      enable_pubsub_triggers.sh: |-
+        $HAL_COMMAND config pubsub google enable
+        $HAL_COMMAND config pubsub google subscription add gcr-triggers           --subscription-name gcr-triggers           --json-path /opt/gcs/key.json           --project tunitech-project-k8s           --message-format GCR
